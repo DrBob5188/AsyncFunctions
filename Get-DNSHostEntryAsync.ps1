@@ -59,7 +59,7 @@
         }
     }
     End {
-        $Task = ForEach ($Computer in $Computername) {
+        $Task = ForEach ($Computer in $Computerlist) {
             If (([bool]($Computer -as [ipaddress]))) {
                 [pscustomobject] @{
                     Computername = $Computer                    
